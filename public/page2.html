@@ -12,68 +12,73 @@
     <h3>Please select the industry and functional area of your current job</h3>
     <fieldset>
         <legend>industry and functional area</legend>
-        <label>Domain:
-            <select name="domain" id="domain">
-                <option value="">Select</option>
-                <option value="IT">IT</option>
-                <option value="BPO/ITES">BPO/ITES</option>
-            </select>
-        </label>
-        <label>Work Type:
-            <select name="worktype_it" id="worktype_it">
-                <option value="Software Development">Software Development</option>
-                <option value="Software Testing">Software Testing</option>
-                <option value="Web scrapping/Crawling">Web scrapping/Crawling</option>
-                <option value="Architecture/Designing">Architecture/Designing</option>
-                <option value="Others">Others</option>
-            </select>
-            <select name="worktype_bpo" id="worktype_bpo">
-                <option value="Voice International">Voice International</option>
-                <option value="Voice Domestic">Voice Domestic</option>
-                <option value="Non-voice/Backoffice">Non-voice/Backoffice</option>
-                <option value="Others">Others</option>
-            </select>
-        </label>
-        <label>Industry:
-            <select name="industry">
-                <option value="">Select</option>
-                <option value="Hotels, Food Service and Catering">Hotels, Food Service and Catering</option>
-                <option value="Agriculture and Related">Agriculture and Related</option>
-                <option value="Arts and Entertainment">Arts and Entertainment</option>
-                <option value="Civil and Construction Works">Civil and Construction Works</option>
-                <option value="Education">Education</option>
-                <option value="Power and Energy">Power and Energy</option>
-                <option value="Finance and Insurance">Finance and Insurance</option>
-                <option value="Healthcare/Healthtech">Healthcare/Healthtech</option>
-                <option value="IT and AIML">IT and AIML</option>
-                <option value="Manufacturing">Manufacturing</option>
-                <option value="Mining And Quarrying">Mining And Quarrying</option>
-                <option value="Public Administration and Defense">Public Administration and Defense</option>
-                <option value="Real Estate Activities">Real Estate Activities</option>
-                <option value="Transportation and Storage">Transportation and Storage</option>
-                <option value="Wholesale and Retail">Wholesale and Retail</option>
-                <option value="Other">Other</option>
-            </select>
-        </label>
-        <label>Designation:
-            <select name="designation">
-                <option value="Entry Level (Executive/Agent)">Entry Level (Executive/Agent)</option>
-                <option value="Mid Management (Team Leader, Manager)">Mid Management (Team Leader, Manager)</option>
-                <option value="Senior Management">Senior Management</option>
-            </select>
-        </label>
+        <form method="post" action="page2">
+            <label>Domain:
+                <select name="domain" id="domain">
+                    <option value="">Select</option>
+                    <option value="IT">IT</option>
+                    <option value="BPO/ITES">BPO/ITES</option>
+                </select>
+            </label>
+            <label>Work Type:
+                <select name="worktype_it" id="worktype_it">
+                    <option value="">Select</option>
+                    <option value="Software Development">Software Development</option>
+                    <option value="Software Testing">Software Testing</option>
+                    <option value="Web scrapping/Crawling">Web scrapping/Crawling</option>
+                    <option value="Architecture/Designing">Architecture/Designing</option>
+                    <option value="Others">Others</option>
+                </select>
+                <select name="worktype_bpo" id="worktype_bpo">
+                    <option value="">Select</option>
+                    <option value="Voice International">Voice International</option>
+                    <option value="Voice Domestic">Voice Domestic</option>
+                    <option value="Non-voice/Backoffice">Non-voice/Backoffice</option>
+                    <option value="Others">Others</option>
+                </select>
+            </label>
+            <label>Industry:
+                <select name="industry">
+                    <option value="">Select</option>
+                    <option value="Hotels, Food Service and Catering">Hotels, Food Service and Catering</option>
+                    <option value="Agriculture and Related">Agriculture and Related</option>
+                    <option value="Arts and Entertainment">Arts and Entertainment</option>
+                    <option value="Civil and Construction Works">Civil and Construction Works</option>
+                    <option value="Education">Education</option>
+                    <option value="Power and Energy">Power and Energy</option>
+                    <option value="Finance and Insurance">Finance and Insurance</option>
+                    <option value="Healthcare/Healthtech">Healthcare/Healthtech</option>
+                    <option value="IT and AIML">IT and AIML</option>
+                    <option value="Manufacturing">Manufacturing</option>
+                    <option value="Mining And Quarrying">Mining And Quarrying</option>
+                    <option value="Public Administration and Defense">Public Administration and Defense</option>
+                    <option value="Real Estate Activities">Real Estate Activities</option>
+                    <option value="Transportation and Storage">Transportation and Storage</option>
+                    <option value="Wholesale and Retail">Wholesale and Retail</option>
+                    <option value="Other">Other</option>
+                </select>
+            </label>
+            <label>Designation:
+                <select name="designation">
+                    <option value="">Select</option>
+                    <option value="Entry Level (Executive/Agent)">Entry Level (Executive/Agent)</option>
+                    <option value="Mid Management (Team Leader, Manager)">Mid Management (Team Leader, Manager)</option>
+                    <option value="Senior Management">Senior Management</option>
+                </select>
+            </label>
 
-        <label>Residential State:
-            <select name="state" id="state">
-                <option value="">Select</option>
-            </select>
-        </label>
-        <label>District:
-            <select name="district" id="district">
-                <option value="">Select</option>
-            </select>
-        </label>
-        <label><input type="submit" /></label>
+            <label>Residential State:
+                <select name="state" id="state">
+                    <option value="">Select</option>
+                </select>
+            </label>
+            <label>District:
+                <select name="district" id="district">
+                    <option value="">Select</option>
+                </select>
+            </label>
+            <label><input type="submit" /></label>
+        </form>
     </fieldset>
     <p>(Your contribution is appreciated. Thank you! </p>
     <p>Want to spread the smile- <a href="page4.html">Click here</a>) </p>
@@ -84,18 +89,18 @@
         const worktype_it   = document.getElementById("worktype_it")
         const worktype_bpo  = document.getElementById("worktype_bpo")
 
-         worktype_it.style.display = 'none'
+        worktype_it.style.display  = 'none'
         worktype_bpo.style.display = 'none'
 
-        domain.addEventListener('change', evt => {           
+        domain.addEventListener('change', evt => {
             const name = evt.target.value
             if (name == 'IT') {
-                worktype_it.style.display = 'block'
+                worktype_it.style.display  = 'block'
                 worktype_bpo.style.display = 'none'
             }
-            else if (name == 'BPO/ITES'){
+            else if (name == 'BPO/ITES') {
                 worktype_bpo.style.display = 'block'
-                worktype_it.style.display = 'none'
+                worktype_it.style.display  = 'none'
             }
         });
     </script>

@@ -40,31 +40,28 @@ const data = {
 const state     = document.getElementById("state");
 const district  = document.getElementById("district")
 
-var keys = Object.keys(data)
-const len = keys.length;
+const keys = Object.keys(data)
+const len  = keys.length;
 
 for (let i = 0; i < len; i++) {
-    let option = document.createElement("option");
-    option.text = keys[i]
-    option.value = keys[i]
+    let option   = document.createElement("option");
+    option.text  = option.value = keys[i]    
     state.add(option)
 }
 
-state.addEventListener("change", evt => {
-    //console.log('state changed...', evt.target.value)
+state.addEventListener("change", evt => {    
     stateValue = evt.target.value
     district.innerHTML = ""
-    let select = document.createElement("option")
-    select.text = "Select"
-    select.value = ""
-    district.add(select)
+    let option = document.createElement("option")
+    option.text = "Select"
+    option.value = ""
+    district.add(option)
     if (stateValue != '') {
         let names = data[stateValue]
         let len = names.length
         for (let i = 0; i < len; i++) {
             let option = document.createElement("option")
-            option.text = names[i]
-            option.value = names[i]
+            option.text = option.value = names[i]            
             district.add(option)
         }
     }
