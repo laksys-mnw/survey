@@ -13,6 +13,7 @@
     <fieldset>
         <legend>industry and functional area</legend>
         <form method="post" action="page2">
+            
             <label>Domain:
                 <select name="domain" id="domain">
                     <option value="">Select</option>
@@ -20,23 +21,13 @@
                     <option value="BPO/ITES">BPO/ITES</option>
                 </select>
             </label>
+            
             <label>Work Type:
-                <select name="worktype_it" id="worktype_it">
-                    <option value="">Select</option>
-                    <option value="Software Development">Software Development</option>
-                    <option value="Software Testing">Software Testing</option>
-                    <option value="Web scrapping/Crawling">Web scrapping/Crawling</option>
-                    <option value="Architecture/Designing">Architecture/Designing</option>
-                    <option value="Others">Others</option>
-                </select>
-                <select name="worktype_bpo" id="worktype_bpo">
-                    <option value="">Select</option>
-                    <option value="Voice International">Voice International</option>
-                    <option value="Voice Domestic">Voice Domestic</option>
-                    <option value="Non-voice/Backoffice">Non-voice/Backoffice</option>
-                    <option value="Others">Others</option>
-                </select>
+                <select name="work_type" id="worktype">
+                    <option value="">Select</option>              
+                </select>              
             </label>
+
             <label>Industry:
                 <select name="industry">
                     <option value="">Select</option>
@@ -58,6 +49,7 @@
                     <option value="Other">Other</option>
                 </select>
             </label>
+            
             <label>Designation:
                 <select name="designation">
                     <option value="">Select</option>
@@ -72,11 +64,13 @@
                     <option value="">Select</option>
                 </select>
             </label>
+            
             <label>District:
                 <select name="district" id="district">
                     <option value="">Select</option>
                 </select>
             </label>
+            
             <label><input type="submit" /></label>
         </form>
     </fieldset>
@@ -85,25 +79,29 @@
 
     <script src="data.js"></script>
     <script>
-        const domain        = document.getElementById("domain")
-        const worktype_it   = document.getElementById("worktype_it")
-        const worktype_bpo  = document.getElementById("worktype_bpo")
+        const domain    = document.getElementById("domain")
+        const worktype  = document.getElementById("worktype")
+       
+        const it  = ["Software Development","Software Testing", "Web scrapping/Crawling","Architecture/Designing","Others"];
+        const bpo = ["Voice International","Voice Domestic", "Non-voice/Backoffice", "Others"];
 
-        worktype_it.style.display  = 'none'
-        worktype_bpo.style.display = 'none'
-
-        domain.addEventListener('change', evt => {
-            const name = evt.target.value
-            if (name == 'IT') {
-                worktype_it.style.display  = 'block'
-                worktype_bpo.style.display = 'none'
+        function createOption(array, element){
+            element.innerHTML = ''
+            for(let i=0; i<array.length; i++){
+                let option = document.createElement("option")
+                option.text = option.value = array[i]
+                element.add(option)
             }
-            else if (name == 'BPO/ITES') {
-                worktype_bpo.style.display = 'block'
-                worktype_it.style.display  = 'none'
-            }
-        });
+        }
+        
+        domain.addEventListener("change", evt => {
+            domainValue = evt.target.value
+            if (domainValue != '') 
+                createOption( domainValue == 'IT' ? it: bpo, worktype)   
+            else
+                worktype.innerHTML = ''             
+        });      
     </script>
-</body>
 
+</body>
 </html>
