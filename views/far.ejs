@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Functional Area</title>
+    <style>
+        td {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Functional Area</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Domain</th>
+                <th>Work Type</th>
+                <th>Industry</th>
+                <th>Designation</th>
+                <th>State</th>
+                <th>District</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% for(var i=0; i < data.length; i++) { %>
+                <tr>
+                    <td><%= data[i].id %></td>
+                    <td><%= data[i].domain %></td>
+                    <td><%= data[i].work_type %></td>
+                    <td><%= data[i].industry %></td>
+                    <td><%= data[i].designation %></td>
+                    <td><%= data[i].state %></td>
+                    <td><%= data[i].district %></td>
+                    <td><%= data[i].dt %></td>                    
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</body>
+
+</html>

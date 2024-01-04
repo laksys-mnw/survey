@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins');
+
 label {
     display: block;
     text-align: right;
@@ -10,9 +11,7 @@ fieldset{
 }
 
 body {
-    margin: 0 auto;
-    width: 1000px;
-    font-family: 'Poppins', Serif;
+     font-family: 'Poppins', Serif;
 }
 
 input, select {

@@ -9,12 +9,7 @@ function unres(req){
         ? ('Credentials ' + req.auth.user + ':' + req.auth.password + ' rejected')
         : 'No credentials provided'
 }
-app.use( auth({
-        users: agents, 
-        challenge: true, 
-        realm: 'Imb4T3st4pp',
-        unauthorizedResponse: unres,
-    }));
+app.use( auth({users: agents, challenge: true}));
 
 app.get("/", (req, res) => {
     res.end("<h1>laksys! Welcome</h1>")

@@ -11,9 +11,9 @@
 <body>
     <h3>Please select the industry and functional area of your current job</h3>
     <fieldset>
-        <legend>industry and functional area</legend>
+        <legend>Fill the details</legend>
         <form method="post" action="page2">
-            
+
             <label>Domain:
                 <select name="domain" id="domain">
                     <option value="">Select</option>
@@ -21,11 +21,11 @@
                     <option value="BPO/ITES">BPO/ITES</option>
                 </select>
             </label>
-            
+
             <label>Work Type:
                 <select name="work_type" id="worktype">
-                    <option value="">Select</option>              
-                </select>              
+                    <option value="">Select</option>
+                </select>
             </label>
 
             <label>Industry:
@@ -49,7 +49,7 @@
                     <option value="Other">Other</option>
                 </select>
             </label>
-            
+
             <label>Designation:
                 <select name="designation">
                     <option value="">Select</option>
@@ -64,13 +64,13 @@
                     <option value="">Select</option>
                 </select>
             </label>
-            
+
             <label>District:
                 <select name="district" id="district">
                     <option value="">Select</option>
                 </select>
             </label>
-            
+
             <label><input type="submit" /></label>
         </form>
     </fieldset>
@@ -79,29 +79,30 @@
 
     <script src="data.js"></script>
     <script>
-        const domain    = document.getElementById("domain")
-        const worktype  = document.getElementById("worktype")
-       
-        const it  = ["Software Development","Software Testing", "Web scrapping/Crawling","Architecture/Designing","Others"];
-        const bpo = ["Voice International","Voice Domestic", "Non-voice/Backoffice", "Others"];
+        const domain = document.getElementById("domain")
+        const worktype = document.getElementById("worktype")
 
-        function createOption(array, element){
+        const it = ["Software Development", "Software Testing", "Web scrapping/Crawling", "Architecture/Designing", "Others"];
+        const bpo = ["Voice International", "Voice Domestic", "Non-voice/Backoffice", "Others"];
+
+        function createOption(array, element) {
             element.innerHTML = ''
-            for(let i=0; i<array.length; i++){
+            for (let i = 0; i < array.length; i++) {
                 let option = document.createElement("option")
                 option.text = option.value = array[i]
                 element.add(option)
             }
         }
-        
+
         domain.addEventListener("change", evt => {
             domainValue = evt.target.value
-            if (domainValue != '') 
-                createOption( domainValue == 'IT' ? it: bpo, worktype)   
+            if (domainValue != '')
+                createOption(domainValue == 'IT' ? it : bpo, worktype)
             else
-                worktype.innerHTML = ''             
+                worktype.innerHTML = ''
         });      
     </script>
 
 </body>
+
 </html>

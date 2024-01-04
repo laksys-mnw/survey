@@ -19,7 +19,7 @@ CREATE TABLE looking_for_job (
     mobile      CHAR(10),
     state       VARCHAR(50),
     district    VARCHAR(50),
-    eduction    VARCHAR(50),
+    education   VARCHAR(50),
     comments    VARCHAR(300),
     dt          TIMESTAMP WITH TIME ZONE DEFAULT current_timestamp
 );

@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Info</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    
-    <fieldset>
-        <legend>You can fill this if you are looking for a job</legend>
-    <form method="post" action="page3">
-        <label>Name: <input type="text" name="name"/></label>
-        <label>Email ID: <input type="email" name="email"/></label>
-        <label>Phone Number: <input type="number" name="mobile"/> </label>
-        <label>State: <select name="state" id="state">
-            <option value="">Select</option>
-        </select></label>
-        <label>District: <select name="district" id="district">
-            <option value="">Select</option>
-        </select></label>
-        <label>Educational Qualification: <input name="text" name="education"/> </label>
-        <label>Comments: <textarea name="comments" rows="5" cols="60"></textarea></label>
-        <label><input type="submit"/></label>
-    </form>
-    </fieldset>
 
+<body>
+    <h3>Looking for Job</h3>
+    <fieldset>
+        <legend>Fill the details</legend>
+        <form method="post" action="page3">
+            <label>Name: <input type="text" name="name" /></label>
+            <label>Email ID: <input type="email" name="email" /></label>
+            <label>Phone Number: <input type="number" name="mobile" /> </label>
+            <label>State: <select name="state" id="state">
+                    <option value="">Select</option>
+                </select></label>
+            <label>District: <select name="district" id="district">
+                    <option value="">Select</option>
+                </select></label>
+            <label>Educational Qualification: <input type="text" name="education" /> </label>
+            <label>Comments: <textarea name="comments" rows="5" cols="50"></textarea></label>
+            <label><input type="submit" /></label>
+        </form>
+    </fieldset>
     <script src="data.js"></script>
 </body>
+
 </html>
