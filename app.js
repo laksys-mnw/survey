@@ -15,7 +15,7 @@ app.use( '/reports/*', auth({users: agents, challenge: true}));
 //------------------------------
 app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({extended: true}));
-app.use(express.static('public'));
+app.use(express.static("public")); 
 
 app.get ('/',      (req, res) => res.sendFile(__dirname + '/public/page1.html'))
 app.post('/page2', (req, res) => addFunctionalArea(req, res));

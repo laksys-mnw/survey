@@ -10,7 +10,11 @@ const pool = new Pool({
 
 pool.connect(
   err => {
-    if (err) throw err;
+    if (err) { //throw err;
+      console.log('------unable to connect db. exiting... app ------')
+      console.log( err['code'])      
+      process.exit(0);
+    }
   }
 );
 

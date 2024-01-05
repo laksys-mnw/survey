@@ -18,3 +18,11 @@ input, select {
     font-family: 'Poppins', Serif;
     font-size: 1rem;
 }
+td {
+    padding: 5px;
+    font-family: 'Poppins', Serif;
+}
+
+body {
+    background-color: wheat;
+}

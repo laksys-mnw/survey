@@ -3,11 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Looking for Job</title>
     <style>
-        td {
+        @import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+        td, th, h1{
             padding: 5px;
+            font-family: 'Poppins', Serif;
         }
     </style>
 </head>
@@ -21,14 +24,14 @@
                 <th>ID</th>
                 <th>Name</th>
                 <th>Email</th>
-                <th>Mobile</th>                
+                <th>Mobile</th>
                 <th>State</th>
                 <th>District</th>
-                
+
                 <th>Current Company</th>
                 <th>Current Designation</th>
                 <th>Exp. in years</th>
-                
+
                 <th>Comments</th>
                 <th>Date</th>
             </tr>
@@ -37,21 +40,43 @@
         <tbody>
             <% for(var i=0; i < data.length; i++) { %>
                 <tr>
-                    <td><%= data[i].id %></td>
-                    <td><%= data[i].name %></td>
-                    <td><%= data[i].email %></td>
-                    <td><%= data[i].mobile %></td>                   
-                    <td><%= data[i].state %></td>
-                    <td><%= data[i].district %></td>
+                    <td>
+                        <%= data[i].id %>
+                    </td>
+                    <td>
+                        <%= data[i].name %>
+                    </td>
+                    <td>
+                        <%= data[i].email %>
+                    </td>
+                    <td>
+                        <%= data[i].mobile %>
+                    </td>
+                    <td>
+                        <%= data[i].state %>
+                    </td>
+                    <td>
+                        <%= data[i].district %>
+                    </td>
 
-                    <td><%= data[i].ccompany %></td>
-                    <td><%= data[i].cdesignation %></td>
+                    <td>
+                        <%= data[i].ccompany %>
+                    </td>
+                    <td>
+                        <%= data[i].cdesignation %>
+                    </td>
 
-                    <td><%= data[i].exp_in_year %></td>
-                    <td><%= data[i].comments %></td>
-                    <td><%= data[i].dt %></td>                    
+                    <td>
+                        <%= data[i].exp_in_year %>
+                    </td>
+                    <td>
+                        <%= data[i].comments %>
+                    </td>
+                    <td>
+                        <%= data[i].dt %>
+                    </td>
                 </tr>
-            <% } %>
+                <% } %>
         </tbody>
     </table>
 </body>
