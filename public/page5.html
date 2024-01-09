@@ -10,35 +10,51 @@
 
 <body>
     <h3>Looking for a job change. Please fill the following details.</h3>
-    <fieldset>
-        <legend>Fill the details</legend>
-        <form method="post" action="page5">
-            <label>Name: <input type="text" name="name" /></label>
-            <label>Eamil Id: <input type="email" name="email" /></label>
-            <label>Phone number: <input type="text" name="mobile"/></label>
-            <label>State: <select name="state" id="state">
-                    <option value="">Select</option>
-                </select></label>
-            <label>District: <select name="district" id="district">
-                    <option value="">Select</option>
-                </select></label>
-            <label>Current Company Name: <input type="text" name="ccompany" /></label>
-            <label>Current Designation: <input type="text" name="cdesignation" /></label>
-            <label>Total years of experience:
-                <select name="exp_in_year">
-                    <option value="0-1 year">0-1 year</option>
-                    <option value="1-2 years">1-2 years</option>
-                    <option value="3-5 years">3-5 years</option>
-                    <option value="5-10 years">5-10 years</option>
-                    <option value="Above 10 years">Above 10 years</option>
-                </select>
-            </label>
-            <label>
-                Comments: <textarea name="comments" rows="5" cols="50"></textarea>
-            </label>
-            <label><input type="submit" /></label>
-        </form>
-    </fieldset>
+
+    <form method="post" action="page5">
+        <label>Name:</label>
+        <input type="text" name="name" />
+
+        <label>Eamil Id:</label>
+        <input type="email" name="email" />
+
+        <label>Phone number:</label>
+        <input type="text" name="mobile" />
+
+        
+
+        <label>State:</label> 
+        <select name="state" id="state">
+            <option value="">Select</option>
+        </select>
+
+        <label>District:</label>
+        <select name="district" id="district">
+            <option value="">Select</option>
+        </select>
+
+        <label>Current Company Name:</label> 
+        <input type="text" name="ccompany" />
+
+        <label>Current Designation:</label> 
+        <input type="text" name="cdesignation" />
+
+        <label>Total years of experience:</label>
+        <select name="exp_in_year">
+            <option value="0-1 year">0-1 year</option>
+            <option value="1-2 years">1-2 years</option>
+            <option value="3-5 years">3-5 years</option>
+            <option value="5-10 years">5-10 years</option>
+            <option value="Above 10 years">Above 10 years</option>
+        </select>
+
+        <label>Comments:</label> 
+        <textarea name="comments" rows="5"></textarea>
+
+        <label></label>
+        <input type="submit" />
+
+    </form>
 
     <script src="data.js"></script>
 </body>

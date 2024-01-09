@@ -1,28 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins');
 
+body, input, select {
+    font-family: 'Poppins', Serif;
+}
+
+ul > li {    
+    list-style: none;
+    
+    padding: 30px;
+    margin: 10px;
+
+}
+li > a {
+    text-decoration: none;
+}
+
 label {
     display: block;
-    text-align: right;
+    padding-top: 30px;
+}
+
+input, textarea {
+    width: 326px;
     padding: 10px;
 }
-fieldset{
-    width: 400px;
-    border: 1px solid lightgray;
+
+select {
+    width: 350px;
+    padding: 10px;
 }
 
-body {
-     font-family: 'Poppins', Serif;
-}
-
-input, select {
-    font-family: 'Poppins', Serif;
-    font-size: 1rem;
-}
-td {
-    padding: 5px;
-    font-family: 'Poppins', Serif;
-}
-
-body {
-    background-color: wheat;
+ol > li {
+    display: inline;
+    padding-right: 30px;
 }
