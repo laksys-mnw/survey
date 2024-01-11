@@ -1,11 +1,11 @@
 const Pool = require('pg').Pool;
 
 const pool = new Pool({
-  user: 'laksys',
-  host: 'localhost',
-  database: 'laksysdb',
-  password: 'abcd1234',
-  port: 5432,
+  user:     'postgres',
+  host:     'localhost',
+  database: 'survey',
+  password: 'Poultry@mnxw123$',
+  port:      5432,
 });
 
 pool.connect(
@@ -31,11 +31,11 @@ const addFunctionalArea = (req, res) => {
   });
 }
 
-const addFunctionalAreaReport = (req, res) => { 
+const addFunctionalAreaReport = (req, res) => {   
   pool.query("SELECT * FROM  functional_area", (error, results) => {
-    if (error) throw error
+    if (error) throw error    
     //res.status(201).send(results.rows)
-    res.status(201).render('far.ejs', {data: results.rows})
+    res.status(201).render('far.ejs', {data: results.rows})    
   });  
 }
 
