@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MNW</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
-    <link rel="shortcut icon" href="m-favicon.png"/>
      <style>
     .card {
       background-color: #fff; /* Set your desired background color */
@@ -36,124 +32,54 @@
 </head>
 
 <body >
+
     <div class="container mt-4 mb-4">
         <div class="card">
             <div class="container mt-4">
                 <div class="card-head text-center mt-4">
                     <h3>Contact Us</h3>
                 </div>
-                <div class="card-body mt-4">
-                    <h5>Share the survey to others working from Home</h5>
-                    <br>
-                    <div class="row container">
-                        <div class="col-sm-12 col-md-6">
-                            <button onclick="shareLink()">Share Link</button>
+                <div class="card-body">
+	<center>	
+        <button onclick="shareLink()"  class="btn btn-lg btn-primary">Share the survey to others working from Home</button><br><br>
+        <button onclick="window.location.href = 'page5.html'" class="btn btn-lg btn-primary">I am looking for a job change</button><br><br>
+        <button onclick="shareLink2()" class="btn btn-lg btn-primary">Share a link to others looking for job</button><br><br>
+	</center>
+	</div>
+	</div>
+	</div>
+	</div>
 
-                            <script>
-                                function shareLink() {
-                                    if (navigator.share) {
-                                        navigator.share({
-                                            title: 'Share Example',
-                                            text: 'Check out this link!',
-                                            url: 'http://15.207.161.44:9001/'
-                                        })
-                                            .then(() => console.log('Successful share'))
-                                            .catch((error) => console.log('Error sharing:', error));
-                                    } else {
-                                        // Fallback for browsers that do not support the Web Share API
-                                        alert("Web Share API is not supported in this browser. You can manually share the link.");
-                                    }
-                                }
-                            </script>
-                            <!-- <div class="row">
-                                <div class="col-sm-12 col-md-4">
-                                    <a
-                                        href="https://www.facebook.com/sharer.php?u=http%3A%2F%2F15.207.161.44%3A9001%2F"><img
-                                            src="facebook.png" width="50px"></a>
-                                            <br><br>
-                                </div>
-                                <div class="col-sm-12 col-md-4">
-                                    <a href="https://twitter.com/intent/tweet?url=http%3A%2F%2F15.207.161.44%3A9001%2F"><img
-                                            src="twitter.png" width="50px"></a>
-                                            <br><br>
-                                </div>
-                                <div class="col-sm-12 col-md-4">
-                                    <a
-                                        href="https://www.linkedin.com/sharing/share-offsite/&url=http%3A%2F%2F15.207.161.44%3A9001%2F"><img
-                                            src="linkedin.png" width="50px"></a>
-                                            <br><br>
-                                </div>
-                            </div> -->
-                        </div>
-                    </div>
-                    <br>
-                    <h5 class="text-center"><a href="page5.html">I am looking for a job change</a></h5>
-                    <br>
-                    <h5>Share a link to others looking for job</h5>
-                    <br>
-                    <div class="row container">
-                        <div class="col-sm-12 col-md-6">
-                            <button id="shareBtntwo">Share</button>
+    <script>
+        function shareLink() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Share the Survey',
+                    text: 'Share the Survey',
+                    url: 'https://workflow.mpulse.plus/'
+                })
+                    .then(() => console.log('Successful share'))
+                    .catch((error) => console.log('Error sharing:', error));
+            } else {
+                alert("Web Share API is not supported in this browser. You can manually share the link.");
+            }
+        }
 
-                            <script>
-                                document.querySelector('#shareBtntwo')
-                                    .addEventListener('click', event => {
 
-                                        // Fallback, Tries to use API only
-                                        // if navigator.share function is
-                                        // available
-                                        if (navigator.share) {
-                                            navigator.share({
+       function shareLink2() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Share others looking for job',
+                    text: 'Share others looking for job',
+                    url: 'https://workflow.mpulse.plus/page5.html'
+                })
+                    .then(() => console.log('Successful share'))
+                    .catch((error) => console.log('Error sharing:', error));
+            } else {
+                alert("Web Share API is not supported in this browser. You can manually share the link.");
+            }
+        }
 
-                                                // Title that occurs over
-                                                // web share dialog
-                                                title: 'Survey',
-
-                                                // URL to share
-                                                url: 'https://example.com'
-                                            }).then(() => {
-                                                console.log('Thanks for sharing!');
-                                            }).catch(err => {
-
-                                                // Handle errors, if occurred
-                                                console.log(
-                                                    "Error while using Web share API:");
-                                                console.log(err);
-                                            });
-                                        } else {
-
-                                            // Alerts user if API not available 
-                                            alert("Browser doesn't support this API !");
-                                        }
-                                    })
-                            </script>
-                            <!-- <div class="row">
-                                <div class="col-sm-12 col-md-4">
-                                    <a
-                                        href="https://www.facebook.com/sharer.php?u=http%3A%2F%2F15.207.161.44%3A9001%2Fpage5.html"><img
-                                            src="facebook.png" width="50px"></a>
-                                    <br><br>
-                                </div>
-                                <div class="col-sm-12 col-md-4">
-                                    <a
-                                        href="https://twitter.com/intent/tweet?url=http%3A%2F%2F15.207.161.44%3A9001%2Fpage5.html"><img
-                                            src="twitter.png" width="50px"></a>
-                                    <br><br>
-                                </div>
-                                <div class="col-sm-12 col-md-4">
-                                    <a
-                                        href="https://www.linkedin.com/sharing/share-offsite/&url=http%3A%2F%2F15.207.161.44%3A9001%2Fpage5.html"><img
-                                            src="linkedin.png" width="50px"></a>
-                                    <br><br>
-                                </div>
-                            </div> -->
-                        </div>
-                    </div>
-                    <br>
-                </div>
-            </div>
-        </div>
-    </div>
+    </script>
 </body>
-
 </html>

@@ -1,7 +1,7 @@
 import express  from 'express';
 import auth     from 'express-basic-auth';
 
-const app = express()
+const app    = express()
 const agents = {'admin': 'abcd1234', 'agent': 'agent1234'}
 
 function unres(req){
@@ -9,6 +9,7 @@ function unres(req){
         ? ('Credentials ' + req.auth.user + ':' + req.auth.password + ' rejected')
         : 'No credentials provided'
 }
+
 app.use( auth({users: agents, challenge: true}));
 
 app.get("/", (req, res) => {
