@@ -7,31 +7,22 @@
     <title>MNW</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
      <style>
-    .card {
-      background-color: #fff; /* Set your desired background color */
-      padding: 20px; /* Adjust padding as needed */
-      border-radius: 10px; /* Adjust border-radius as needed */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow effect */
-      opacity: 0.7; /* Set the opacity value (0.0 to 1.0) */
-    }
-     body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            /* Set the height to 100% of the viewport height */
-            background: url('background_image.png');
-            /* Set background image properties */
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-  </style>
+
+
+		body {
+					margin: 0; 
+					display: grid;
+					place-items: center;
+					height: 100vh;			
+		}
+.bg { 
+			background-image: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), 
+						url('background_image.png') ;
+   		background-size: cover;			
+		}  </style>
 </head>
 
-<body >
+<body class="bg">
 
     <div class="container mt-4 mb-4">
         <div class="card">
@@ -56,7 +47,7 @@
                 navigator.share({
                     title: 'Share the Survey',
                     text: 'Share the Survey',
-                    url: 'https://workflow.mpulse.plus/'
+                    url: 'https://quest.mnw.ai/'
                 })
                     .then(() => console.log('Successful share'))
                     .catch((error) => console.log('Error sharing:', error));
@@ -71,7 +62,7 @@
                 navigator.share({
                     title: 'Share others looking for job',
                     text: 'Share others looking for job',
-                    url: 'https://workflow.mpulse.plus/page5.html'
+                    url: 'https://quest.mnw.ai/page5.html'
                 })
                     .then(() => console.log('Successful share'))
                     .catch((error) => console.log('Error sharing:', error));

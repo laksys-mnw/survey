@@ -10,6 +10,7 @@ var https_options = {
 	key:  fs.readFileSync("cert/server.key"),
 	cert: fs.readFileSync("cert/server.cert")
 }
+
 //-------------------------------------------
 
 const bodyparser = require('body-parser');
@@ -42,6 +43,6 @@ app.get('/reports/ljr', (req, res)=> lookingForJobReport(req, res) )
 app.get('/reports/jcr', (req, res)=> jobChangeReport(req, res) )
 
 const server = https.createServer(https_options, app)
-.listen(PORT, () => console.log(`Server running at localhost:${PORT}`));
+   .listen(PORT, () => console.log(`Server running at localhost:${PORT}`));
 
 //app.listen(PORT, () => console.log(`Server is up on port ${PORT}...`));
