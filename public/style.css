@@ -34,3 +34,11 @@ ol > li {
     display: inline;
     padding-right: 30px;
 }
+
+table {
+    border-collapse: collapse;
+}
+td, th {
+    border: 1px solid lightgray;
+    padding: 20px 7px;
+}
