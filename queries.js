@@ -19,7 +19,7 @@ pool.connect(
 );
 
 const addFunctionalArea = (req, res) => {
-	console.log( req.body)
+	//console.log( req.body)
 
   const { domain, work_type, industry, designation, state, district } = req.body;
   const qry = `INSERT INTO functional_area
