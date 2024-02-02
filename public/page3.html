@@ -7,29 +7,18 @@
     <title>Mnw</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.png"/>
-    <style>
-        body {
-            background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-                url('background_image.png');
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            place-items: center;    
-            padding: 20px;        
-        }
-        h3 { text-align: center;}
-        sup { color: red;}
-    </style>
+   <link rel="stylesheet" href="style.css"> 
 </head>
 
 <body>
     <div class="container">
-        <h3>Looking for Job</h3>
+        <h3>Looking for Job? Feel free to provide your details.</h3>
 
         <form method="post" action="page3">
             <div class="form-group">
                 <label>Name<sup>*</sup>:</label> 
                 <input class="form-control" type="text" name="name" required/> 
+                
                 <br>
             </div>
             <div class="form-group">
@@ -38,8 +27,8 @@
                 <br>
             </div>
             <div class="form-group">
-                <label>Phone Number:</label> 
-                <input class="form-control" type="text" name="mobile"/>
+                <label>Phone Number:</label>                 
+                <input class="form-control" type="text" name="mobile" pattern="[1-9]{1}[0-9]{9}"/>
                 <br>
             </div>
             <div class="form-group">

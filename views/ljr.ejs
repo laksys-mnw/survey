@@ -7,7 +7,8 @@
     <link rel="shortcut icon" href="favicon.png">
     <title>Looking for Job</title>
     <style>
-        td, th{
+        td,
+        th {
             padding: 5px 20px;
             border: 1px solid lightgray;
             white-space: nowrap;
@@ -18,7 +19,7 @@
     </style>
 </head>
 
-<body>
+<body>   
     <h1>Looking for Job</h1>
 
     <table>
@@ -27,7 +28,7 @@
                 <th>ID</th>
                 <th>Name</th>
                 <th>Email</th>
-                <th>Mobile</th>                
+                <th>Mobile</th>
                 <th>State</th>
                 <th>District</th>
                 <th>Education</th>
@@ -39,17 +40,35 @@
         <tbody>
             <% for(var i=0; i < data.length; i++) { %>
                 <tr>
-                    <td><%= data[i].id %></td>
-                    <td><%= data[i].name %></td>
-                    <td><%= data[i].email %></td>
-                    <td><%= data[i].mobile %></td>                   
-                    <td><%= data[i].state %></td>
-                    <td><%= data[i].district %></td>
-                    <td><%= data[i].education %></td>
-                    <td><%= data[i].comments %></td>
-                    <td><%= data[i].dt %></td>                    
+                    <td>
+                        <%= data[i].id %>
+                    </td>
+                    <td>
+                        <%= data[i].name %>
+                    </td>
+                    <td>
+                        <%= data[i].email %>
+                    </td>
+                    <td>
+                        <%= data[i].mobile %>
+                    </td>
+                    <td>
+                        <%= data[i].state %>
+                    </td>
+                    <td>
+                        <%= data[i].district %>
+                    </td>
+                    <td>
+                        <%= data[i].education %>
+                    </td>
+                    <td>
+                        <%= data[i].comments %>
+                    </td>
+                    <td>
+                        <%= data[i].dt %>
+                    </td>
                 </tr>
-            <% } %>
+                <% } %>
         </tbody>
     </table>
 </body>

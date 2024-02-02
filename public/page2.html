@@ -9,36 +9,12 @@
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
         integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="favicon.png" />
-    <style>
-        body {
-            background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('background_image.png');
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            place-items: center;
-            padding: 20px;
-        }
-
-        #wt,
-        #in,
-        #dn,
-        #st,
-        #dt,
-        #ct {
-            display: none;
-        }
-
-        h3,
-        h5 {
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <div>
-
         <h3>What fascinating world keeps you busy these days? Tell us the industry and the area where you make your
             magic
             happen.</h3>
@@ -167,7 +143,8 @@
         });
         
         window.onbeforeunload = function() {
-            //return "Really want to leave?";      
+            //return "Really want to leave?";
+            alert('good bye....')      
             if(!updated) 
                 update()
         }
