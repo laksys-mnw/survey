@@ -142,12 +142,16 @@
             });
         });
         
-        window.onbeforeunload = function() {
-            //return "Really want to leave?";
-            alert('good bye....')      
-            if(!updated) 
-                update()
-        }
+        // window.onbeforeunload = function() {
+        //     if(!updated) 
+        //         update()
+        // }
+
+        window.addEventListener("beforeunload", function (e) {
+            if( !updated)
+                update();
+            return;  
+        });
 
         function update() {
             var fd = new FormData(document.forms[0])
