@@ -14,11 +14,10 @@
     <div class="container">
         <h3>Looking for Job? Feel free to provide your details.</h3>
 
-        <form method="post" action="page3">
+        <form method="post" action="page3" onsubmit="return validate(this)">
             <div class="form-group">
                 <label>Name<sup>*</sup>:</label> 
                 <input class="form-control" type="text" name="name" required/> 
-                
                 <br>
             </div>
             <div class="form-group">
@@ -55,12 +54,46 @@
                 <textarea class="form-control" name="comments" rows="3"></textarea>
             </div>
             <br>
-
             <button class="btn btn-primary float-end">Submit</button>
         </form>
 
     </div>
 
     <script src="data.js"></script>
+
+    <script>        
+        var updated = false;
+
+        function update(){
+            var fd = new FormData(document.forms[0])
+            var data = {}
+            fd.forEach((val, key) => data[key] = val);
+
+            const options = {
+                method: "post",
+                body: JSON.stringify(data),
+                headers: {
+                    "Content-Type": "application/json",
+                }
+            }
+
+            if( data['name'] && data['email'])
+                fetch("/page3", options)
+        }
+    
+        function validate(frm){
+            if( !updated){
+                updated = true
+                frm.submit();
+            }
+        }
+
+        window.addEventListener("beforeunload", function (e) {
+            if(!updated){
+                update();
+                updated = true;
+            }
+        });        
+    </script>
 </body>
 </html>
